@@ -1,5 +1,4 @@
-const SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycbyvlYqeHm06772MysLbtBYA0TkWjN-8lnte1i9vgIyRs38DC_rbW6OdCOKtzN93AvsT/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyvlYqeHm06772MysLbtBYA0TkWjN-8lnte1i9vgIyRs38DC_rbW6OdCOKtzN93AvsT/exec";
 
 const bags = [];
 
