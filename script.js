@@ -6,7 +6,7 @@ const bags = [];
 for(let i = 1; i <= 16; i++){
     bags.push({
         id: i,
-        image: `bag${i}.webp`
+        image: `images/bag${i}.webp`
     });
 }
 
