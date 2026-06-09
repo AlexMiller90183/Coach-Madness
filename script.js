@@ -1,4 +1,4 @@
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzu0zWS0I3nqVWWY6Y2geXGWVAX3D2J9oiU8dFQ_kaYXmeFLoG6V68ZiRJGdacHw0wz/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxgOScET9XfjWIRmQr6lmVtlSRBJ0phddxuMLEraUJKXFk6v-EhOgfcjdWUxP1Ty_c/exec";
 
 const bags = [];
 
@@ -92,14 +92,7 @@ function chooseWinner(index){
     locked = true;
 
     const winner = currentRound[index];
-    const loserIndex =
-        index === matchIndex
-        ? matchIndex + 1
-        : matchIndex;
 
-    const loser = currentRound[loserIndex];
-
-    // WINNER STYLE
     if(index === matchIndex){
         leftBag.classList.add("win");
         rightBag.classList.add("lose");
@@ -147,11 +140,15 @@ function finishTournament(winner){
 
     fetch(SCRIPT_URL, {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
+        mode: "no-cors",
         body: JSON.stringify({
             winner: `Bag ${winner.id}`
         })
+    })
+    .then(() => {
+        console.log("Winner submitted");
+    })
+    .catch(err => {
+        console.error("Submit failed:", err);
     });
 }
