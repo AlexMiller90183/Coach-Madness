@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coach Madness</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="start-screen">
-    <h1>🏆 Coach Madness 🏆</h1>
+    <h1>Coach Madness</h1>
     <p>The Ultimate Bag Championship</p>
     <button id="playBtn">Play</button>
 </div>
 
 <div id="game-screen" class="hidden">
     <h2 id="roundTitle"></h2>
+    <p id="roundSubtitle">Select your favorite from the two</p>
 
     <div class="matchup">
-        <img id="leftBag">
-        <img id="rightBag">
+        <img id="leftBag" alt="Bag option 1">
+        <img id="rightBag" alt="Bag option 2">
     </div>
 </div>
 
 <div id="winner-screen" class="hidden">
     <h1>Champion!</h1>
-    <img id="winnerImage">
+    <img id="winnerImage" alt="Winning bag">
     <p>Excellent choice.</p>
 </div>
 
